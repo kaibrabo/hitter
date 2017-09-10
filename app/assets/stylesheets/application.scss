@@ -1,0 +1,99 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+
+/*
+*= require jquery-ui
+*/
+
+body {
+    background-color: #111111;
+    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand {
+    a {
+        color: #125688;
+    }
+}
+
+.navbar-default {
+    background-color: #111111;
+    height: 54px;
+    .navbar-nav li a {
+        color: #125688;
+    }
+}
+
+.navbar-container {
+    // width: 640px;
+    margin: 0 auto;
+}
+
+.posts-wrapper {
+    padding-top: 40px;
+    margin: 0 auto;
+    max-width: 642px;
+    width: 100%;
+}
+
+.post {
+    background-color: #222222;
+    border-color: #111111;
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    margin-bottom: 10px;
+}
+
+.post-head {
+    height: 64px;
+    padding: 14px 20px;
+    color: #125688;
+    font-size: 15px;
+    line-height: 18px;
+    .thumbnail {}
+    .name {
+        display: block;
+    }
+}
+
+.image {
+    border-bottom: 1px solid #111111;
+    border-top: 1px solid #111111;
+}
+
+.caption {
+    padding: 24px 24px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #dddded;
+}
+
+.form-wrapper {
+    text-align: center;
+    width: 75%;
+    margin: 20px auto;
+    background-color: #222222;
+    color: #dddded;
+    padding: 40px;
+    border: 1px solid #111111;
+    border-radius: 3px;
+}
+
+.edit-links {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.navbar {
+    border: none;
+}
+
+.navbar-collapse {
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+#addImage {
+    color: #dddded;
+}

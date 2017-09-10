@@ -1,0 +1,24 @@
+<!-- <% @posts.each do |post| %>
+    <hr />
+    <%= image_tag post.image.url(:medium) %>
+    <hr />
+    <%= post.caption %>
+    <hr />
+<% end %> -->
+
+
+    <% @posts.reverse_each do |post| %>
+        <div class="post posts-wrapper row">
+            <div class="post-head">
+                <div class="name">
+                    <strong>Kai Brabo</strong>
+                </div>
+            </div>
+            <div class="image center-block">
+                <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+            </div>
+            <p class="caption">
+                <em><%= post.caption %></em>
+            </p>
+        </div>
+    <% end %>

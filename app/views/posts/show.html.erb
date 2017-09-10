@@ -1,0 +1,21 @@
+<div class="post posts-wrapper row">
+    <div class="post-head">
+        <div class="name">
+        <strong>#{Kai Brabo}</strong>
+        </div>
+    </div>
+    <div class="image center-block">
+        <%= image_tag @post.image.url(:medium), class:'img-responsive' %>
+    </div>
+    <p class="caption">
+        <em><%= @post.caption %></em>
+    </p>
+</div>
+
+<div class="text-center edit-links">
+    <h3>
+        <%= link_to "Edit", edit_post_path(@post) %> //
+        <%= link_to "Delete", posts_path(@post), method: :delete, data: {confirm: "Are your sure you want to delete this post?"} %> //
+        <%= link_to "Cancel", posts_path %>
+    </h3>
+</div>

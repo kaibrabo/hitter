@@ -1,0 +1,7 @@
+<h3 id="addImage">Edit Image:</h3>
+
+<div class="image center-block">
+    <%= image_tag @post.image.url(:medium), class:'img-responsive' %>
+</div>
+
+<%= render "form" %>
