@@ -1,4 +1,4 @@
-require 'spec_helper.rb'
+require 'rails_helper.rb'
 
 feature 'can view individual posts' do
     scenario 'can click and view a specific post' do
