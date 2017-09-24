@@ -1,16 +1,4 @@
-<div class="post posts-wrapper row">
-    <div class="post-head">
-        <div class="name">
-        <strong><%= @post.user.user_name %></strong>
-        </div>
-    </div>
-    <div class="image center-block">
-        <%= image_tag @post.image.url(:medium), class:'img-responsive' %>
-    </div>
-    <p class="caption">
-        <em><%= @post.caption %></em>
-    </p>
-</div>
+<%= render 'post', post: @post %>
 
 <div class="text-center edit-links">
     <h3>
