@@ -6,6 +6,9 @@
             <div class="user-name">
                 <%= post.user.user_name %>
             </div>
+            <div class="time-ago">
+                <%= time_ago_in_words post.created_at %> ago
+            </div>
         </div>
 
         <div class="image center-block">
@@ -13,9 +16,15 @@
         </div>
 
         <div class="post-bottom">
+            <!-- <3 button -->
+            <div class="like-button col-sm-1">
+                <span class="glyphicon glyphicon-star-empty"></span>
+            </div>
+
             <div class="caption">
                 <div class="caption-content">
                     <div class="user-name">
+                        <span class="glyphicon glyphicon-camera"></span>
                         <%= post.user.user_name %>
                     </div>
                     <%= post.caption %>
@@ -26,15 +35,11 @@
                         <%= render post.comments, post: post %>
                     <% end %>
                 </div>
-                
+
             </div>
         </div>
 
         <div class="comment-like-form row">
-            <!-- <3 button -->
-            <div class="like-button col-sm-1">
-                <span class="glyphicon glyphicon-thumbs-up"></span>
-            </div>
             <!-- add a comment -->
             <div class="comment-form col-sm-11">
                 <%= form_for([post, post.comments.build], remote: true) do |f| %>
