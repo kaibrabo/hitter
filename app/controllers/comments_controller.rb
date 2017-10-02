@@ -14,8 +14,10 @@ class CommentsController < ApplicationController
         @comment.user_id = current_user.id
 
         if @comment.save
-            flash[:success] = "You posted a comment!"
-            redirect_to :back
+            respond_to do |format|
+                format.html {redirect_to root_path}
+                format.js
+            end
         else
             flash[:alert] = "Please check over your comment before you post it."
             redirect_to root_path
@@ -24,10 +26,12 @@ class CommentsController < ApplicationController
 
     def destroy
         @comment = @post.comments.find(params[:id])
-        @comment.destroy
-
-        flash[:success] = "Deleted that comment."
-        redirect_to root_path
+        @comment.delete
+        respond_to do |format|
+            format.html { redirect_to root_path }
+            format.js
+        end
+        redirect_back(fallback_location: root_path)
     end
 
     private
